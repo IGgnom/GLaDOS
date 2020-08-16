@@ -48,15 +48,9 @@ namespace GLaDOS
                 case string Case when Case.Contains("+") || Case.Contains("-") || Case.Contains("*") || Case.Contains("/") || Case.Contains("!"):
                     GLaDOSCalc.CalculatorActionHandler(Case);
                     break;
-                case string Case when Case == "яна какаха?":
-                    GLaDOSMisc.GLaDOSAnswer("Яна какаха! Подтверждаю!");
-                    break;
                 case string Case when Case == "rnd":
                     Random Randomize = new Random();
                     GLaDOSMisc.GLaDOSAnswer(Convert.ToString(Randomize.Next(0, 9)));
-                    break;
-                case string Case when Case == "homophobia":
-                    GLaDOSMisc.GLaDOSAnswer("Kill all homophobes!");
                     break;
                 default:
                     GLaDOSMisc.GLaDOSAnswer("Error. Enter command again or type \"?\" for information.");
